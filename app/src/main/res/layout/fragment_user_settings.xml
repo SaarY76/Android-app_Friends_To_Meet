@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
+    tools:context=".UserSettingsFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_layoutS">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BackGroundForText"
+                android:text="Settings" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name :"
+                    style="@style/BlackTextSize20" />
+                <EditText
+                    android:fontFamily="@font/alata"
+                    android:background="@drawable/edit_text_frame"
+                    android:id="@+id/editTextUserNameS"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingStart="8dp"
+                    android:hint="Enter Your User Name"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="#41000000" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Area :"
+                    style="@style/BlackTextSize20" />
+
+                <Spinner
+                    android:fontFamily="@font/alata"
+                    android:id="@+id/spinnerCityS"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="@color/white"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownVerticalOffset="40dp"
+                    android:dropDownHorizontalOffset="-8dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:hint="Enter Your City"
+                    android:inputType="textPostalAddress" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                android:text="Upload your image :"
+                style="@style/BlackTextSize20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+<!--                    <ProgressBar-->
+<!--                        android:id="@+id/progress_bar_Settings"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:indeterminate="true" />-->
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/uploadImageS2"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/border_buttons_layout" />
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/vectorImageS"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/image_for_upload" />-->
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/uploadImageButton"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:onClick="uploadImage"
+                    android:text="Upload" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Summary :"
+                style="@style/BlackTextSize20" />
+
+
+            <EditText
+                android:fontFamily="@font/alata"
+                style="@style/DesignForTextView"
+                android:background="@drawable/edit_text_frame"
+                android:id="@+id/editTextSummaryS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tell about yourself (Max length : 250 characters)"
+                android:inputType="textMultiLine"
+                android:maxLength="250"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textColorHint="#41000000"
+                android:textSize="16sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Interests :"
+                style="@style/BlackTextSize20" />
+            <TextView
+                android:id="@+id/errorMessageInterestsSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:text="Please select at least one interest."
+                />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line" />
+            <TextView
+                style="@style/DesignForTextView"
+                android:text="Change Email"
+                android:drawableStart="@drawable/change_email"
+                android:textColor="#D60D0D"
+                android:onClick="changeEmail"/>
+            <TextView
+                style="@style/DesignForTextView"
+                android:textColor="#D60D0D"
+                android:text="Change Password"
+                android:drawableStart="@drawable/passwordforlogin"
+                android:layout_marginBottom="18dp"
+                android:onClick="changePassword"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/line" />
+
+            <TextView
+                style="@style/DesignForTextView"
+                android:textColor="@color/purple_700"
+                android:drawableStart="@drawable/delete_forever"
+                android:text="Delete User"
+                android:onClick="deleteUser"/>
+
+            <TextView
+                style="@style/DesignForTextView"
+                android:textColor="@color/purple_700"
+                android:drawableStart="@drawable/baseline_info_24"
+                android:text="Info"
+                android:onClick="info"/>
+
+            <TextView
+                style="@style/DesignForTextView"
+                android:layout_marginBottom="18dp"
+                android:textColor="@color/purple_700"
+                android:onClick="logoutUser"
+                android:text="Logout"
+                android:drawableStart="@drawable/logout_settings"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/button_layoutS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_buttons_layout">
+
+            <Button
+                android:id="@+id/settings_fragment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#5EC67C"
+                android:layout_marginBottom="15dp"
+                android:onClick="saveSettings"
+                android:text="Save Changes"/>
+
+            <Button
+                android:id="@+id/btn_cancelR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FA0026"
+                android:onClick="cancelSave"
+                android:text="Cancel"  />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/logo"/>
+
+    <EditText
+        android:background="@drawable/edit_text_frame"
+        android:id="@+id/emailEditText"
+        android:drawableStart="@drawable/baseline_email_icon"
+        android:drawablePadding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:hint="Email"
+        android:textColor="#000000"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp" />
+    <!-- android:background="@drawable/edit_text_background"  android:textColorHint="@color/dark_gray" -->
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:drawableStart="@drawable/passwordforlogin"
+        android:drawablePadding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/edit_text_frame"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:drawableEnd="@drawable/baseline_visibility_24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/checkBoxSaveLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeUserWantToSaveLogin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep me logged in"
+            android:textColor="#1D84D6"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/errorMessageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#F44336" />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/Login"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:text="Login"
+            android:backgroundTint="#7493E4"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp"
+            android:onClick="login"/>
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="Registration"
+            android:textSize="10sp"
+            android:backgroundTint="#99FFB6"
+            android:textColor="@color/black"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="15dp"
+            android:onClick="registration"/>
+<!--        #CCCDCB"-->
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:clickable="true"
+        android:id="@+id/forgot_password"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact us"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:clickable="true"
+        android:id="@+id/contactUs"
+        android:layout_marginTop="32dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:textDirection="ltr"
+    tools:context=".UserHomeConnectionsFragment"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:id="@+id/connectionFragmentLinearLayout">
+
+
+    <TextView
+        style="@style/BackGroundForText"
+        android:text="Connections"
+       />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_Connections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true" />
+
+    <TextView
+        android:id="@+id/noConnectionsMessageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="There are no Connections now,\n\nYou can change your Interests or living area to maybe get Connections :)"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:textSize="25sp"
+        android:textColor="#009688"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/changeSettingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Click Here\nto\nchange your settings"
+        android:textSize="10dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/teal_700"
+        android:onClick="changeSettings"
+        android:visibility="gone"/>
+</LinearLayout>
